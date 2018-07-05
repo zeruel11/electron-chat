@@ -1,11 +1,19 @@
 {
   "main": "src/electron-starter.js",
   "devDependencies": {
-    "electron": "^2.0.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0",
     "foreman": "^2.0.0",
     "react-scripts": "^1.0.14"
   },
   "dependencies": {
+    "@pusher/chatkit": "^0.7.16",
+    "add": "^2.0.6",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "electron": "^2.0.4",
+    "express": "^4.16.3",
+    "pusher-chatkit-server": "^0.12.0",
     "react": "^16.0.0",
     "react-desktop": "^0.3.5",
     "react-dom": "^16.0.0"
@@ -15,6 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "electron": "electron .",
-    "dev": "nf start -p 3002"
+    "serve": "node server.js",
+    "dev": "nf start -p 3002",
+    "install-wsl": "npm install && npm uninstall electron && export npm_config_platform=win32 && npm install electron && unset npm_config_platform"
   }
 }
